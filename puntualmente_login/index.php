@@ -21,6 +21,15 @@ if($userPuntualmente->iniciar_sesion()){
             case 'crepre':
                 $userPuntualmente->pagcrearPreg();
                 break;
+            case 'lispre':
+                $userPuntualmente->listarPreg();
+                break;
+            case 'ahomeuser':
+                $userPuntualmente->ahomeuser();
+                break;
+            case 'neweva':
+                $userPuntualmente->newEvaluacion();
+                break;
             case 'cerrar':
                 $userPuntualmente->cerrar_sesion();
                 break;
@@ -47,7 +56,7 @@ if($userPuntualmente->iniciar_sesion()){
     }
 
     else{
-        $userPuntualmente->cerrar_sesion();
+        
     }
 
 }else{

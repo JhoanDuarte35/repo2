@@ -17,6 +17,10 @@ class controlador{
         return false;
     }
 
+    public function newEvaluacion(){
+        include_once(__dir__."/../views/evaluacion/nuevaEvaluacion.php");
+    }
+
     public function pagCrearPreg(){
         include_once(__dir__."/../views/test/admin_eva/crearPreg.php");
     }
@@ -35,6 +39,14 @@ class controlador{
 
     public function validar(){
         include_once(__dir__."/../views/login/php/validarlogin.php");
+    }
+
+    public function listarPreg(){
+        include_once(__dir__."/../views/test/preguntas/preguntas.php");
+    }
+
+    public function ahomeuser(){
+        include_once(__dir__."/../views/homeuser/homeuser.php");
     }
 
     function cerrar_sesion(){

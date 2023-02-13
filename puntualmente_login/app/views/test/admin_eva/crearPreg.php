@@ -13,13 +13,15 @@
     <form id="form-preg">
         <div class="form-group">
             <label for="formGroupExampleInput">Nueva Pregunta</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu pregunta">
+            <input type="text" class="form-control" id="preg" placeholder="Escribe tu pregunta">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Puntuacion pregunta</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Agrega puntuacion a la pregunta">
+            <input type="text" class="form-control" id="puntos" placeholder="Agrega puntuacion a la pregunta">
         </div>
         <input class="btn btn-primary" type="button" value="Agregar pregunta">
+        
+        <div align="center" class="alert" id="mensaje"></div>
     </form>
 
     <script type="text/javascript">
@@ -29,9 +31,9 @@
                 event.preventDefault();
                 $.ajax({
                     dataType:"json",
-                    url:"<?php echo controlador::$rutaAPP?>index.php?action=validar",
+                    url:"<?php echo controlador::$rutaAPP?>index.php?action=subirpreg",
                     type:"POST",
-                    data:{usr:$("#username").val(),pass:$("#pass").val()},
+                    data:{usr:$("#preg").val(),pass:$("#puntos").val()},
                     success: function(data){
                         if(data.success==false){
                             $("#mensaje").show();

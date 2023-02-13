@@ -19,7 +19,7 @@
 			$_SESSION["rol"]=$result[0]["rol"];
 
 			if($result[0]["rol"]==1){
-				$info=array('success'=>true, 'msg'=>"Usuario Correcto",'link'=>controlador::$rutaAPP."index.php?action=admin");
+				$info=array('success'=>true, 'msg'=>"Usuario Correcto",'link'=>controlador::$rutaAPP."index.php?action=ahomeuser");
 				$result=$usuariosDatos->update_query("update usuarios set intentos=0 where usuario='".$_POST["usr"]."'");
 			}elseif($result[0]["rol"]==2){
 				$info=array('success'=>true, 'msg'=>"Usuario Correcto",'link'=>controlador::$rutaAPP."index.php?action=operarios");

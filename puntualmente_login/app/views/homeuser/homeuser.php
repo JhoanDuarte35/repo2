@@ -9,11 +9,31 @@
     <link rel="stylesheet" href="<?php echo controlador::$rutaAPP?>app/views/admins/css/menu.css">
     <title>Admin</title>
 </head>
+
+<?php
+            require_once __dir__."/../../model/getData.php";
+            $persona=new GetDatos();
+            $result=$persona->selectQuery("SELECT * FROM persona WHERE id= '".$_SESSION["id_usuario"]."'");
+?>
+
 <body>
+	<div>
+		<h1>foto</h1>
+		<img src="#" alt="">
+	</div>
+	<div>
+	<h3><?php echo $result[0]['nombres']." ".$result[0]['apellidos']?></h3>
+	<span class="text muted"><?php echo $_SESSION['username']?></span>
+	<br>
+	<span> ip </span>
+	</div>
+
+	<div class="opsuser">
+		<a href="#">Proyectos</a>
+		<a href="#">Horas Ingreso</a>
+		<a href="#">Configuración</a>
+	</div>
 	
-	<?php
-	echo "admin";
-	?>
 
 
 
