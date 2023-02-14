@@ -17,6 +17,10 @@ class controlador{
         return false;
     }
 
+    public function paginaEvaguar(){
+        include_once(__dir__."/../views/evaluacion/php/guardar_eva.php");
+    }
+
     public function newEvaluacion(){
         include_once(__dir__."/../views/evaluacion/nuevaEvaluacion.php");
     }

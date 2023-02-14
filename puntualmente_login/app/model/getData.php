@@ -26,7 +26,8 @@ class GetDatos extends DataBase{
 			$this->conectar();
 		}
 		$consulta=$this->consultar($query);
-		return $this->getLastInsert();
+		//return $this->getLastInsert();
+		return $consulta;
 	}
 
 	public function update_query($query) {

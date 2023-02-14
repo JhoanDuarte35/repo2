@@ -12,6 +12,10 @@ if($userPuntualmente->iniciar_sesion()){
     if(isset($_GET["action"]) && $_SESSION["rol"]==1){
         
         switch($_GET["action"]){
+
+            case 'evaguar':
+                $userPuntualmente->paginaEvaguar();
+                break;
             case 'admin':
                 $userPuntualmente->paginaAdmin();
                 break;
@@ -38,6 +42,7 @@ if($userPuntualmente->iniciar_sesion()){
                 break;
         }
     }
+    // Operarios
 
     else if (isset($_GET["action"])&&$_SESSION["rol"]==2){
 
